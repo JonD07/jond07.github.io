@@ -1,146 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Jonathan Diller</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
+<head>
+<title>Jonathan Diller</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 0;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+		<i class="fa fa-remove"></i>
+	</a>
+	<h4 class="w3-bar-item"><b>Menu</b></h4>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#">Home</a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#bio">Bio</a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#currentResearch">Current Research</a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#prevProjects">Previous Projects</a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#publications">Publications</a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="JonathanDillerResume.pdf" target="_blank">CV</a>
+</nav>
 
-    <link rel="stylesheet" href="css/aos.css">
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-
-	<!-- END COLORLIB-PAGE -->
-	<div id="colorlib-page">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		
-		<!-- START COLORLIB-ASIDE -->
-		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(images/portait.jpg);"></span>Jonathan Diller</a></h1>
-			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
-					<li class="colorlib-active"><a href="index.html">Home</a></li>
-					<li><a href="blog.html">Blog and News</a></li>
-					<li><a href="temp.html">Projects</a></li>
-					<li><a href="temp.html">Publications</a></li>
-					<li><a href="temp.html">CV</a></li>
-				</ul>
-			</nav>
-		</aside>
-		<!-- END COLORLIB-ASIDE -->
-		
-		<!-- START COLORLIB-MAIN -->
-		<div id="colorlib-main"> 
-			<section class="ftco-section-no-padding bg-light">
-				<div class="hero-wrap">
-					<div class="overlay"></div>
-					<div class="d-flex align-items-center js-fullheight">
-						<div class="author-image text img d-flex">
-							<section class="home-slider js-fullheight owl-carousel">
-					      <div class="slider-item js-fullheight" style="background-image:url(images/skiing.jpg);">
-					      </div>
-					      <div class="slider-item js-fullheight" style="background-image: url(images/birthday.jpg);">
-					      </div>
-					      <div class="slider-item js-fullheight" style="background-image:url(images/fishing.jpg);">
-					      </div>
-					      <div class="slider-item js-fullheight" style="background-image:url(images/interview.jpg);">
-					      </div>
-					      <div class="slider-item js-fullheight" style="background-image:url(images/poster_symp.jpg);">
-					      </div>
-					    </section>
-						</div>
-						<div class="author-info text p-3 p-md-5">
-							<div class="desc">
-								<span class="subheading">Hello, World! I'm</span>
-								<h1 class="big-letter">Jonathan Diller</h1>
-								<h1 class="mb-4"><span>Jonathan Diller</span></h1>
-								<p class="mb-4">I am a PhD student in Robotics at Colorado School of Mines. My research interests are in autonomous robots, swarms robotics, and smartgrid control. I also have a general interest in Machine Learning and Artificial Intelligence.</p>
-								<p class="mb-4">In my free-time I enjoy skiing and snowboarding. During the summer I like to go golfing, hiking, and running. I'm also an avid traveler and love to explore new places and try new foods.</p>
-								<ul class="ftco-social mt-3">
-		              <li class="ftco-animate"><a href="https://www.linkedin.com/in/jonathanadiller" target="_blank"><span class="icon-linkedin"></span></a></li>
-		              <li class="ftco-animate"><a href="https://www.instagram.com/jonathandiller/" target="_blank"><span class="icon-instagram"></span></a></li>
-		              <li class="ftco-animate"><a href="https://github.com/JonD07" target="_blank"><span class="icon-github"></span></a></li>
-		            </ul>
-	            </div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<!-- START Footer -->
-			<footer class="ftco-footer ftco-bg-dark ftco-section">
-	      <div class="container px-md-5">
-	        <div class="row mb-5">
-	          <div class="col-md">
-	            <div class="ftco-footer-widget mb-4">
-	            	<h2 class="ftco-heading-2">Contact</h2>
-	            	<div class="block-23 mb-3">
-		              <ul>
-		                <li><span class="icon icon-map-marker"></span><span class="text">N. Union St, Middletown, Pennsylvania, USA</span></li>
-		                <li><span class="icon icon-envelope"></span><span class="text">jonathan . a . diller at gmail . com</span></li>
-		                <li><span class="icon icon-envelope"></span><span class="text">jdiller at mymail . mines . edu</span></li>
-		              </ul>
-		            </div>
-	            </div>
-	          </div>
-	        </div>
-					<div class="row">
-						<div class="col-md-12">
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Website template made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						</div>
-					</div>
-	      </div>
-	    </footer>
-			<!-- END Footer -->
-	    
+	<!-- <div class="row">
+		<div class="column">
+			<div class="w3-third w3-container">
+				
+				<img src="images/jonathandiller_StudentMarshal.jpg" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium">
+			</div>
 		</div>
-		<!-- END COLORLIB-MAIN -->
+		<div class="column">
+			<div class="w3-third w3-container">
+				<h1 class="w3-text-teal">Jonathan Diller</h1>
+				<p style="margin-bottom:0;">Email: jdiller -at- mines -dot- edu</p>
+				<a href="https://www.linkedin.com/in/jonathanadiller" target="_blank" class="fa fa-linkedin-square w3-hover-opacity"></a>
+				<a href="https://www.instagram.com/jonathandiller/" target="_blank" class="fa fa-instagram w3-hover-opacity"></a>
+				<a href="https://github.com/JonD07" target="_blank" class="fa fa-github w3-hover-opacity"></a>
+			</div>
+		</div>
+	</div>  -->
+
+	<!-- Home -->
+	<div class="w3-row w3-padding-64">
+		<div class="w3-third w3-container">
+			<center><img src="images/Hiking.jpg" style="width:75%" onclick="onClick(this)" alt="Windows for the atrium"></center>
+		</div>
+		<div class="w3-twothird w3-container">
+			<h1 class="w3-text-teal">Jonathan Diller</h1>
+			<p style="margin-bottom:0; margin-top: 0;"><i>Graduate Student, Robotics & Computer Science</i></p>
+			<p style="margin-bottom:0; margin-top: 0;">Colorado School of Mines</p>
+			<p style="margin-bottom:0; margin-top:auto;">Email: <i>jdiller -at- mines -dot- edu</i></p>
+			<!-- <p style="margin : 0; padding-top:0;">GitHub: <a href="https://github.com/JonD07" target="_blank">@JonD07</a></p> -->
+			<a href="https://www.linkedin.com/in/jonathanadiller" target="_blank" class="fa fa-linkedin-square w3-hover-opacity"></a>
+			<a href="https://www.instagram.com/jonathandiller/" target="_blank" class="fa fa-instagram w3-hover-opacity"></a>
+			<a href="https://github.com/JonD07" target="_blank" class="fa fa-github w3-hover-opacity"></a>
+		</div>
 	</div>
-	<!-- END COLORLIB-PAGE -->
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+	<!-- Bio -->
+	<div class="w3-row w3-padding-64">
+		<div class="w3-twothird w3-container"  id="bio">
+			<h1 class="w3-text-teal">Bio</h1>
+			<!-- <p>Hello, my name is Jonathan Diller!</p> -->
+			<p>I am a PhD student in Robotics at Colorado School of Mines. I am a member of the Pervasive Computing Systems (<a href="https://pecs.mines.edu/" target="_blank">PeCS</a>) research group, working under <a href="https://people.mines.edu/qhan/" target="_blank">Dr. Qi Han</a>. My research interests are in autonomous robots with a focus on path planning for UAVs. I also have a general interest in artificial intelligence, math optimization, and smartgrid control. Prior to starting at Mines, I completed a bachelor's degree in Computer Science with minors in Mathematics and Mechatronics Technologies at Penn State Harrisburg. Prior to starting postsecondary education, I severed in the United States Marine Corps for five years.</p> 
+			<p>In my free time I enjoy skiing, golfing, hiking, and playing video games. I'm also an avid traveler and love to explore new places and try new foods.</p>
+		</div>
+		<!-- <div class="w3-third w3-container">
+			<p class="w3-padding-large w3-padding-small w3-center"></p>
+			<img src="images/jonathandiller_StudentMarshal.jpg" style="width:85%" onclick="onClick(this)" alt="Windows for the atrium">
+		</div> -->
+	</div>
 
+	<!-- Current Research -->
+	<div class="w3-row">
+		<div class="w3-twothird w3-container"  id="currentResearch">
+			<h1 class="w3-text-teal">Current Research</h1>
+			<p>My current research is focused on path planning for UAVs where the launch and receive sites are dynamic, integrated communication and control for swarms of UAVs, and building robust UAV testbeds for evaluating algorithms.</p>
+		</div>
+	</div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+	<!-- MT-OTM -->
+	<div class="w3-row">
+		<div class="w3-twothird w3-container">
+			<h3 class="w3-text-blue-gray">Minimizing Time while On-The-Move</h3>
+			<p>In many UAV applications, it is more advantageous for a UAV base station to move to a new location after launching UAVs as opposed to remaining in the same position while the UAV performs some given task. In this project we are looking at how plan UAV routes that minimize mission completion time while accounting for a moving base station. We also consider the relationship between UAV speed and power consumption and look at how scheduling speed can effect route planning.</p>
+		</div>
+		<div class="w3-third w3-container">
+			<img src="images/MT-OTM.png" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium">
+		</div>
+	</div>
+
+	<!-- SmallSat -->
+	<div class="w3-row w3-padding-32">
+		<div class="w3-twothird w3-container">
+			<h3 class="w3-text-blue-gray">SmallSat</h3>
+			<p>In this project we are looking at how to integrate communication and control in swarms of UAVs. We use the <a href="https://solarsystem.nasa.gov/missions/near-shoemaker/in-depth/"  target="_blank">NEAR-Shoemaker</a> mission as a motivating case study and look at how using a swarm of small satellites could be used to optimize the quantity and quality of data collected from the asteroid Eros.</p>
+		</div>
+		<div class="w3-third w3-container">
+			<img src="images/smallsat.png" style="width:75%" onclick="onClick(this)" alt="Windows for the atrium">
+		</div>
+	</div>
+
+	<!-- Previous Projects -->
+	<div class="w3-row">
+		<div class="w3-twothird w3-container"  id="prevProjects">
+			<h1 class="w3-text-teal">Previous Projects</h1>
+			<p></p>
+		</div>
+	</div>
+
+	<!-- Load-Leveling Trainer -->
+	<div class="w3-row">
+		<div class="w3-twothird w3-container">
+			<h3 class="w3-text-blue-gray">Load-Leveling on Cyber-Physical Microgrid</h3>
+			<p>Improving the reliability and efficiency of microgrids to handle diverse load types will lead to more dependable electrical grids in small communities, reduce costs for both consumers and suppliers, and reduce carbon emissions. This work propose a hardware implementation of demand side management (DSM) on an actual microgrid system to support grid needs. We proposed an algorithm for achieving DSM through load-leveling at the micro-level and implemented it on a physical microgrid. We conducted a simulated case study, based on the electrical load needs of small communities in Bangladesh, to demonstrate how our algorithm can be used to better balance electrical load demands.</p>
+		</div>
+		<div class="w3-third w3-container">
+			<img src="images/microgrid.png" style="width:70%" onclick="onClick(this)" alt="Windows for the atrium">
+		</div>
+	</div>
+
+	<!-- Sinusoidal PWM -->
+	<div class="w3-row w3-padding-32">
+		<div class="w3-twothird w3-container">
+			<h3 class="w3-text-blue-gray">Sinusoidal PWM for Three-Phase Converter</h3>
+			<p>Sinusoidal Pulse width modulation (sPWM) is the most commonly used technology for switching power electronics-based power converters in smart grids. This work looked at how to implement sPWM for single-phase and three-phase silicon carbide (SiC) converters using digital signal processing boards from Texas Instruments. We implemented our sPWM signal for SiC converters on a C2000 F28069M LaunchPad development kit and used it on a 3.5 kW three-phase SiC inverter experimental setup to validate the three-phase sPWM implementation.</p>
+		</div>
+		<div class="w3-third w3-container">
+			<img src="images/SPWM.png" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium">
+		</div>
+	</div>
+
+	<!-- Publications -->
+	<div class="w3-row">
+		<div class="w3-twothird w3-container"  id="publications">
+			<h1 class="w3-text-teal">Publications</h1>
+			<p></p>
+		</div>
+	</div>
+
+	<!-- Conference Papers -->
+	<div class="w3-row">
+		<div class="w3-twothird w3-container">
+			<h3 class="w3-text-blue-gray">Conference Papers</h3>
+			<p style="font-family:'Courier New'; font-size: 12px; text-align: justify;">Jonathan Diller, Peter Hall, Corey Schanker, Kristen Ung, Philip Belous, Peter Russell, and Qi Han. "<i>ICCSwarm: A Framework for Integrated Communication and Control in UAV Swarms.</i>" <strong>Submitted to</strong> Eighth ACM Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet 2022), 2022.</p>
+			<p style="font-family:'Courier New'; font-size: 12px; text-align: justify;">Jonathan Diller and Qi Han. "<i>Mission Time Minimization for UAV & Moving Base Station Through Adaptive Speed.</i>" <strong>Submitted to</strong> 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems, 2022.</p>
+			<p style="font-family:'Courier New'; font-size: 12px; text-align: justify;">Jonathan Diller, Peter Idowu, and Javad Khazaei. "<i>Load-Leveling Trainer for Demand Side Management on a 45kW Cyber-Physical Microgrid.</i>" In 2020 IEEE Texas Power and Energy Conference (TPEC), 2020.</p>
+			<p style="font-family:'Courier New'; font-size: 12px; text-align: justify;">Jonathan Diller, Brennan Trussell, Javad Khazaei, and Peter Idowu. "<i>Hardware Development of a Sinusoidal PWM on a Three-phase 3.5 Kw SiC Converter.</i>" In 2020 IEEE Texas Power and Energy Conference (TPEC), 2020.</p>
+		</div>
+	</div>
+
+	<footer id="myFooter">
+		<div class="w3-container w3-theme-l2 w3-padding-16">
+			<h4>Social</h4>
+			<a href="https://www.linkedin.com/in/jonathanadiller" target="_blank" class="fa fa-linkedin-square w3-hover-opacity"></a>
+			<a href="https://www.instagram.com/jonathandiller/" target="_blank" class="fa fa-instagram w3-hover-opacity"></a>
+			<a href="https://github.com/JonD07" target="_blank" class="fa fa-github w3-hover-opacity"></a>
+		</div>
+
+		<div class="w3-container w3-theme-l1">
+			<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+		</div>
+	</footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
 </html>
