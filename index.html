@@ -17,6 +17,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   bottom: 0;
   height: inherit;
 }
+p {
+	font-size: 18px;
+	line-height: 1.7;
+}
 </style>
 </head>
 <body>
@@ -30,11 +34,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 	<div class="w3-large w3-container w3-padding-32">
 		<center><img src="images/Hiking.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium"></center>
 	</div>
-	<div class="w3-large w3-container">
-		<h3 class="w3-text-teal">Jonathan Diller</h3>
-		<p class="w3-text-dark-gray" style="margin-bottom:0; margin-top: 0;"><i>PhD Student, Robotics</i></p>
-		<p class="w3-text-dark-gray" style="margin-bottom:0; margin-top: 0;">Colorado School of Mines</p>
-		<p class="w3-text-dark-gray" style="margin-bottom:0; margin-top:auto;">Email: <i>jdiller -at- mines.edu</i></p>
+	<div class="w3-large w3-container" style="text-align:center">
+		<h3 class="w3-text-teal text-align:center" style="font-size:30px; font-weight:bold">Jonathan Diller</h3>
+		<p class="w3-text-dark-gray" style="margin-bottom:0; margin-top: 0; font-size:16px;"><i>PhD Student, Robotics</i></p>
+		<p class="w3-text-dark-gray" style="margin-bottom:0; margin-top: 0; font-size:16px;">Colorado School of Mines</p>
+		<p class="w3-text-dark-gray" style="margin-bottom:0; margin-top:auto; font-size:16px;"><i class="fa fa-envelope">  jdiller -at- mines.edu</i></p>
 	</div>
 
 	<br>
@@ -47,6 +51,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 		<a href="https://www.linkedin.com/in/jonathanadiller" target="_blank" class="fa fa-linkedin-square w3-hover-opacity"></a>
 		<a href="https://scholar.google.com/citations?user=hnUsTqgAAAAJ&hl=en" target="_blank" class="fa fa-graduation-cap w3-hover-opacity"></a>
 		<a href="https://github.com/JonD07" target="_blank" class="fa fa-github w3-hover-opacity"></a>
+		<a href="https://twitter.com/JonADiller" target="_blank" class="fa fa-twitter w3-hover-opacity"></a>
 		<a href="https://www.instagram.com/jonathandiller/" target="_blank" class="fa fa-instagram w3-hover-opacity"></a>
 	</div>
 </nav>
@@ -62,9 +67,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 		<div class="w3-twothird w3-container"  id="bio">
 			<h1 class="w3-text-teal">Bio</h1>
 			<p>Hello, my name is Jonathan Diller!</p>
-			<p>I am a PhD student in Robotics at Colorado School of Mines. I am a member of the Pervasive Computing Systems (<a href="https://pecs.mines.edu/" target="_blank">PeCS</a>) research group, working under <a href="https://people.mines.edu/qhan/" target="_blank">Dr. Qi Han</a>. My research interests are in autonomous robots with a focus on task and mission planning for UAVs. I also have a general interest in artificial intelligence and math optimization. I completed a master's degree in Computer Science at Colorado School of Mines in 2022 and a bachelor's degree in Computer Science with minors in Mathematics and Mechatronics Technologies at Penn State Harrisburg. Prior to starting postsecondary education, I served in the United States Marine Corps for five years.</p> 
+			<p>I am a Ph.D. student in Robotics at Colorado School of Mines. I am a member of the Pervasive Computing Systems (<a href="https://pecs.mines.edu/" target="_blank">PeCS</a>) research group, working under <a href="https://people.mines.edu/qhan/" target="_blank">Dr. Qi Han</a>. My research interests are in autonomous robots with a focus on task and mission planning for UAVs. I also have a general interest in artificial intelligence and math optimization. I completed a master's degree in Computer Science at Colorado School of Mines in 2022 and a bachelor's degree in Computer Science with minors in Mathematics and Mechatronics Technologies at Penn State Harrisburg. Prior to starting postsecondary education, I served in the United States Marine Corps for five years.</p> 
 			<p>In my free time I enjoy skiing, golfing, hiking, and playing video games. I'm also an avid traveler and love to explore new places and try new foods.</p>
 		</div>
+		<!-- <div class="w3-third w3-container">
+			<br>
+			<a class="twitter-timeline" href="https://twitter.com/JonADiller?ref_src=twsrc%5Etfw"  data-border-color="#0000FF" tweet-limit="3" width="50%" style="display: flex; max-width: 100%; margin-top: 0px; margin-bottom: 0px;" >Tweets by JonADiller</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+		</div> -->
 	</div>
 
 	<!-- Current Research -->
@@ -103,9 +112,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 			<h3 class="w3-text-blue-gray">On-The-Move Planning</h3>
 			<p>In many UAV applications, it is more advantageous for a UAV base station to move to a new location after launching UAVs as opposed to remaining in the same position while the UAV performs some given task. In this project we are looking at how to plan UAV routes that minimize mission completion time while accounting for a moving base station. We also consider the relationship between UAV speed and power consumption and look at how scheduling speed can effect route planning.</p>
 		</div>
-		<!-- <div class="w3-third w3-container">
+		<div class="w3-third w3-container">
 			<img src="images/MT-OTM.png" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium">
-		</div> -->
+		</div>
 	</div>
 
 	<!-- Previous Projects -->
