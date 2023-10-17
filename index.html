@@ -149,12 +149,12 @@ p {
 		</div>
 	</div>
 
-	<!-- <button id="plusbtn">&#43;</button> -->
+	
 	<!-- Prob. Task Assignments -->
 	<button class="collapsible"><h3 class="w3-text-blue-gray" style="margin-left:250px">Task Assignments with Failures</h3></button>
 	<div class="content" style="margin-left:250px">
 		<p>The classical task assignment problem can be applied to various real-world applications. However, in many applications agents are not guaranteed to complete their assigned task 100% of the time and agents might become faulty during task execution, requiring one to reassign agents to tasks. In this work, we consider how to maximize the probability that all tasks are completed while considering the probability that an agent could fail during task execution.</p>
-		<!-- <img src="images/ICCSwarmDrone.jpg" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium"> -->
+		<div class="w3-padding-32"><img src="images/MonitoringSetupColorful.png" style="width:75%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image"></div>
 	</div>
 
 	<!-- MinLat -->
@@ -177,7 +177,7 @@ p {
 	<button class="collapsible"><h3 class="w3-text-blue-gray" style="margin-left:250px">Communication Jamming & Mapping</h3></button>
 	<div class="content" style="margin-left:250px">
 		<p>This project studies how to enable mobile agents to avoid malicious communication jamming through mapping techniques. We look at networked ground robots operating around WiFi jammers as our motivating application.</p>
-		<div class="w3-padding-32"><img src="images/jackal_cut.jpg" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image"></div>
+		<div class="w3-padding-32"><img src="images/comms-map.png" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image"></div>
 	</div>
 	<!-- <div class="w3-row w3-padding-32"  style="margin-left:250px">
 		<div class="w3-twothird w3-container">
@@ -193,7 +193,7 @@ p {
 	<button class="collapsible"><h3 class="w3-text-blue-gray" style="margin-left:250px">Collaborative UAV-UGV Planning</h3></button>
 	<div class="content" style="margin-left:250px">
 		<p>In many UAV applications, it is more advantageous for a UAV base station to move to a new location after launching UAVs as opposed to remaining in the same position while the UAV performs some given task. In this project we are looking at how to plan UAV routes that minimize mission completion time while accounting for a moving base station. We also consider the relationship between UAV speed and power consumption and look at how scheduling speed can effect route planning.</p>
-		<div class="w3-padding-32"><img src="images/MT-OTM.png" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image"></div>
+		<div class="w3-padding-32"><img src="images/otm-golden.png" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image"></div>
 	</div>
 	<!-- <div class="w3-row w3-padding-32"  style="margin-left:250px">
 		<div class="w3-twothird w3-container">
@@ -285,7 +285,7 @@ p {
 	<!-- Abstracts -->
 	<div class="w3-row"  style="margin-left:250px">
 		<div class="w3-container">
-			<h3 class="w3-text-blue-gray">Abstracts</h3>
+			<h3 class="w3-text-blue-gray">Extended Abstracts</h3>
 			<p style="font-family:'Courier New'; font-size: 16px; text-align: justify; line-height: 1.15;">J. Diller. "<i>Planning and Coordination for Unmanned Aerial Vehicles.</i>" Presented at the International Conference on Autonomous Agents and Multiagent Systems' Doctoral Consortium, 2023. <i>[<a href="https://www.southampton.ac.uk/~eg/AAMAS2023/pdfs/p3017.pdf" target="_blank">abstract</a>]</i></p>
 			<p style="font-family:'Courier New'; font-size: 16px; text-align: justify; line-height: 1.15;">J. Diller, Q. Han, C. Dreyer, F. Rossi, S. Bandopadhyay, J.P. de la Croix, A. Rahmani, P. Clark. "<i>Integrated Communication and Controls for Swarms of Small Satellites.</i>" Presented at the Inter-Planetary Small Satellite Conference, 2021. <i>[<a href="http://www.intersmallsatconference.com/past/2021/B.6%20-%20Diller/ISSC2021-abstract(1).txt" target="_blank">abstract</a>]</i></p>
 		</div>
@@ -331,11 +331,19 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
+
+    for (var j = 0; j < coll.length; j++) {
+      if (coll[j] !== this) {
+        coll[j].classList.remove("active");
+        coll[j].nextElementSibling.style.maxHeight = null;
+      }
+    }
+
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
 }
 
