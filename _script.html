@@ -1,0 +1,19 @@
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	  const buttons = document.querySelectorAll(".collapsible");
+	  const contents = document.querySelectorAll(".collapsible-content");
+	
+	  buttons.forEach((button, index) => {
+		button.addEventListener("click", () => {
+		  contents.forEach((content, i) => {
+			if (i === index) {
+			  content.style.display = content.style.display === "block" ? "none" : "block";
+			} else {
+			  content.style.display = "none";
+			}
+		  });
+		});
+	  });
+	});
+</script>
