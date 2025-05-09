@@ -12,7 +12,7 @@
 <div class="sidebar">
 <div class = "sidebar-content" style="text-align:center">		
 	</class>
-	<img src="images/JonathanDiller.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+	<img src="images/Jonathan_Diller.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
 	<h3 class="text-align:center" style="font-size:30px; font-weight:bold">Jonathan Diller</h3>	
 	<!-- <br> -->
 	<ul>
@@ -36,45 +36,62 @@
 <div class="main-content">
 <h1>Research</h1>
 <p>
-	My research is in planning and tasking for multi-robot teams and autonomous agents. A common theme in my work is incorporating realistic models of the world into planning algorithms. Examples include energy consumption and communication models that are based on experimental work.
+	My research is in planning and tasking for multi-robot systems and autonomous agents. A common theme in my work is incorporating realistic models of the world into planning algorithms. Examples include energy consumption and communication models that are based on experimental work.
 </p>
 
 <h2 class="w3-text-teal">Current Research</h2>
 <p>
-	My current work is focused on task assignments that account for potential failures and building a robust drone testbed for evaluating algorithms.
+	My current work is focused on tasking for drone-UGV teams, path finding for multi-drone data collection, and decentralized multi-robot task allocation problems. A common theme in these works is to ensure that our planning algorithms produce not only quality solutions, but solutions that are feasible on our physical hardware and representative of what we see our robots doing in the real-world.
 </p>
 <div class="collapsible-section">
-	<!-- Prob. Task Assignments -->
-	<button class="collapsible">Task Assignments with Failures</button>
+	<!-- Drone-UGV -->
+	<button class="collapsible">Mixed Drone-UGV Planning</button>
 	<div class="collapsible-content">
-		<p>The classical task assignment problem can be applied to various real-world applications. However, in many applications agents are not guaranteed to complete their assigned task 100% of the time and agents might become faulty during task execution, requiring one to reassign agents to tasks. In this work, we consider how to maximize the probability that all tasks are completed while considering the probability that an agent could fail during task execution.</p>
-		<img src="images/MonitoringSetupColorful.png" style="width:75%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p>
+			Drones are agile platforms that can be launched quickly and can easily traverse rough terrain. However, drones have limited onboard energy and cannot be deployed for extended periods of time. In contrast, Unmanned Ground Vehicles (UGVs) are robust, high endurance platforms that can cary a variety of sensors and operate for long periods of time, but lack the agility of drones. When combined, mixed drone-UGV teams could benefit from the strengths of each platform, where drones quickly accomplish tasks with agility and UGVs act as mobile recharging stations. This line of work looks at problems in planning and tasking for mixed drone-UGV teams, with a focus on energy sharing and communication.
+		</p>
+		<img src="images/Drone-UGV-Team.jpg" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
 	</div>
 
 	<!-- MinLat -->
-	<button class="collapsible">Multi-UAV Data Collection</button>
+	<button class="collapsible">Multi-Drone Data Collection</button>
 	<div class="collapsible-content">
-		<p>In this project, we study how to effectively deploy a team of UAVs to collect data from wireless sensors. We seek to combine offline planning with online decision making that can be validated through both simulations and physical testbed evaluations.</p>
+		<p>
+			This work studies how to effectively deploy a team of drones to collect data from wireless sensors. We seek to combine offline multi-vehicle task planning with online adaptive behavior through a data-driven approach. A major aspect of this work is validating our solution through both simulations and field experiments on our physical testbed.
+		</p>
 		<img src="images/ICCSwarmDrone.jpg" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
 	</div>
 
-	<!-- Jamming -->
-	<button class="collapsible">Communication Jamming & Mapping</button>
+	<!-- MRTA -->
+	<button class="collapsible">Multi-Robot Task Allocation</button>
 	<div class="collapsible-content">
-		<p>This project studies how to enable mobile agents to avoid malicious communication jamming through mapping techniques. We look at networked ground robots operating around WiFi jammers as our motivating application.</p>
-		<img src="images/comms-map.png" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
-	</div>
-
-	<!-- MT-OTM -->
-	<button class="collapsible">Collaborative UAV-UGV Planning</button>
-	<div class="collapsible-content">
-		<p>In many UAV applications, it is more advantageous for a UAV base station to move to a new location after launching UAVs as opposed to remaining in the same position while the UAV performs some given task. In this project we are looking at how to plan UAV routes that minimize mission completion time while accounting for a moving base station. We also consider the relationship between UAV speed and power consumption and look at how scheduling speed can effect route planning.</p>
-		<img src="images/otm-golden.png" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p>
+			Some of the major challenges in task planning for multi-robot systems is properly managing robot resources (e.g. capabilities, energy, collaboration) while mitigating failures. This line of work seeks to design and validate algorithms for multi-robot task allocation problems while overcoming these challenges. We are particularly interested in decentralized approaches that can adapt to lossy communication links between robots.
+		</p>
+		<img src="images/MonitoringSetupColorful.png" style="width:75%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
 	</div>
 </div>
 
 <h2 class="w3-text-teal">Previous Work</h2>
 <div class="collapsible-section">
+	<!-- Jamming -->
+	<button class="collapsible">Communication Jamming & Mapping</button>
+	<div class="collapsible-content">
+		<p>
+			This work studied how to enable mobile agents to communicate effectively while avoiding malicious communication jamming. We explored various mapping techniques and looked at how to incorporate these maps in to the planning process for robot teams. 
+		</p>
+		<img src="images/comms-map.png" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+	</div>
+
+	<!-- MT-OTM -->
+	<button class="collapsible">Energy-Aware Drone Path Finding</button>
+	<div class="collapsible-content">
+		<p>
+			This work looked at how to incorporate speed-based drone energy models into path finding algorithms. We explored trade-offs in the speed-based energy model and evaluated how these tradeoffs could be leveraged to improve path finding. We also investigated the problem of launching drones from a ground vehicle that moves along a fixed trajectory. Applications for this work include maritime search and rescue, defense, security, and disaster response. 
+		</p>
+		<img src="images/otm-golden.png" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+	</div>
+
 	<!-- SmallSat -->
 	<button class="collapsible">SmallSat</button>
 	<div class="collapsible-content">
