@@ -35,83 +35,130 @@
 <div class="main-content">
 <h1>Research</h1>
 <p>
-	My research is in planning and tasking for multi-robot systems and autonomous agents. A common theme in my work is incorporating realistic models of the world into planning algorithms. Examples include energy consumption and communication models that are based on experimental work.
+	My research elevates resource awareness to a first-class driver of decision-making in multi-agent robotics. Real-world deployment of autonomous robots is fundamentally limited by finite resources &mdash; energy, communication, computation, and sensing &mdash; and these limitations are acutely stressed in multi-agent settings, where robots must navigate complex interactions with other mechanical, virtual, and living agents pursuing cooperative, competitive, or adversarial objectives. By integrating resource considerations into planning and decision-making, I develop algorithms for resilient autonomy and validate them through real-world deployments in critical domains including agriculture, disaster response, and defense.
 </p>
 
 <h2 class="w3-text-teal">Current Research</h2>
 <p>
-	My current work is focused on tasking for drone-UGV teams, path finding for multi-drone data collection, and decentralized multi-robot task allocation problems. A common theme in these works is to ensure that our planning algorithms produce not only quality solutions, but solutions that are feasible on our physical hardware and representative of what we see our robots doing in the real-world.
+	I am currently incorporating semantic information, computation, and sensing limitations into my work on autonomous decision-making, organized around three thematic threads that extend the breadth of my prior work. The threads span collaborative air-ground target search, closed-loop decision making for agricultural robotics, and computationally tractable alignment of embodied AI with social norms. Together, they advance my broader vision of resource-aware autonomy by treating new resource classes &mdash; information, sensing, and computation &mdash; as first-class drivers of team-level and on-device decision-making, and each is grounded in ongoing field deployments and active multi-institutional collaborations.
 </p>
 <div class="collapsible-section">
-	<!-- Drone-UGV -->
-	<button class="collapsible">Mixed Drone-UGV Planning</button>
+	<!-- Thread 1 -->
+	<button class="collapsible">Air-Ground Teaming for Target Search</button>
 	<div class="collapsible-content">
 		<p>
-			Drones are agile platforms that can be launched quickly and can easily traverse rough terrain. However, drones have limited onboard energy and cannot be deployed for extended periods of time. In contrast, Unmanned Ground Vehicles (UGVs) are robust, high endurance platforms that can cary a variety of sensors and operate for long periods of time, but lack the agility of drones. When combined, mixed drone-UGV teams could benefit from the strengths of each platform, where drones quickly accomplish tasks with agility and UGVs act as mobile recharging stations. This line of work looks at problems in planning and tasking for mixed drone-UGV teams, with a focus on energy sharing and communication.
+			This work focuses on collaborative air-ground robot teams for target search while building on my prior work in resource-aware planning. I am investigating the use of semantically driven search priors to allocate sub-regions between aerial and ground platforms by reasoning about target movement and platform mobility. A parallel effort within this thread addresses how to resolve both spatial and semantic uncertainty of discovered targets within partially connected teams. To coordinate these teams, I have also been investigating scheduling algorithms with a focus on quantifying the mission relevance of information based on sensor uncertainty, information age, and discovery novelty. Together, these components will enable air-ground teams to maintain a shared operational picture despite intermittent connectivity, heterogeneous sensing, and dynamic target behavior.
 		</p>
-		<img src="images/Drone-UGV-Team.jpg" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p><strong>Relevant publications:</strong></p>
+		<ul>
+			<li>J. Diller, F. Cladera, C. J. Taylor, and V. Kumar, &ldquo;LMPath: Language-mediated priors and path generation for aerial exploration,&rdquo; in AI-Driven Safe Aerial Robotics Workshop, 2026.</li>
+			<li>A. K. Srivastava, J. Diller, V. Kumar, and P. Dames, &ldquo;Spatial-semantic uncertainty in VLM-based target search: Balancing exploration and identification,&rdquo; in Workshop on Rethinking Uncertainty for Modern Robotics Paradigms, 2026.</li>
+			<li>J. Diller, F. Cladera, C. J. Taylor, and V. Kumar, &ldquo;DORA: Divergence-oriented data-relay algorithm for partially connected robot teams,&rdquo; submitted to the International Conference on Robotics and Automation (ICRA), 2027.</li>
+		</ul>
+		<img src="images/heated-path.jpg" style="width:65%" onclick="onClick(this)" alt="Exploration prior generated using LMPath for air-ground target search" class="center-image">
 	</div>
 
-	<!-- MinLat -->
-	<button class="collapsible">Multi-Drone Data Collection</button>
+	<!-- Thread 2 -->
+	<button class="collapsible">Closed-Loop Decision Making in Agricultural Robotics</button>
 	<div class="collapsible-content">
 		<p>
-			This work studies how to effectively deploy a team of drones to collect data from wireless sensors. We seek to combine offline multi-vehicle task planning with online adaptive behavior through a data-driven approach. A major aspect of this work is validating our solution through both simulations and field experiments on our physical testbed.
+				This thread investigates how autonomous systems can allocate limited sensing and energy resources to map complex physical phenomena, using precision agriculture as a motivating application. The central question it addresses is: how should robots balance the value of acquiring new information against the physical resources required to obtain it? To tackle this challenge, our cross-disciplinary, multi-institutional is investigating autonomous mapping and treatment of soil acidity. We are designing and constructing an autonomous in situ soil pH sensing platform for a mobile ground robot, enabling direct field measurements without manual sampling. To guide sampling actions during deployment, we are developing adaptive sampling algorithms that can jointly reason about sensing uncertainty, travel cost, sampling budgets, and field geometry.
 		</p>
-		<img src="images/ICCSwarmDrone.jpg" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p><strong>Relevant publications:</strong></p>
+		<ul>
+			<li>M. Gellar, J. Diller, F. Cladera, K. Huang, S. Rahman Rahmani, S. Carpin, and V. Kumar, &ldquo;Autonomous soil pH sensing under heterogeneous field conditions,&rdquo; in From Innovation to Adoption: Hardware, AI, Policy, and Funding Challenges in Agricultural Robotics Workshop, 2026.</li>
+		</ul>
+		<img src="images/RobotPanel.jpg" style="width:65%" onclick="onClick(this)" alt="Autonomous soil sampling robot platform" class="center-image">
 	</div>
 
-	<!-- MRTA -->
-	<button class="collapsible">Multi-Robot Task Allocation</button>
+	<!-- Thread 3 -->
+	<button class="collapsible">Computationally Tractable Alignment with Social Norms</button>
 	<div class="collapsible-content">
 		<p>
-			Some of the major challenges in task planning for multi-robot systems is properly managing robot resources (e.g. capabilities, energy, collaboration) while mitigating failures. This line of work seeks to design and validate algorithms for multi-robot task allocation problems while overcoming these challenges. We are particularly interested in decentralized approaches that can adapt to lossy communication links between robots.
+			As embodied AI is deployed in high-stakes environments, ensuring that autonomous actions align with societal expectations becomes paramount. This work investigates how generative AI can encode societal expectations into feedback mechanisms that steer on-device models in real-time, treating normative alignment as a computational resource management problem. The goal of this thread is to make alignment tractable on computationally constrained robotic platforms by treating the generation and application of normative feedback as resources to be budgeted, scheduled, and traded off against other mission-relevant computation.
 		</p>
-		<img src="images/MonitoringSetupColorful.png" style="width:75%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p><strong>Relevant publications:</strong></p>
+		<ul>
+			<li>J. Diller, D. Barnes, R. Bogdanoff, R. Collier, R. Collins, K. Fieldhouse, Y. Gefen, C. Johnson, A. Kodali, B. Kriel, V. Murali, J. Niehaus, M. Sukharev, J. VanPelt, A. Hoogs, V. Kumar, and A. Basharat, &ldquo;REBAR: Reference ethical benchmark for autonomy readiness,&rdquo; submitted to Springer Proceedings in Advanced Robotics, 2026.</li>
+		</ul>
 	</div>
 </div>
 
 <h2 class="w3-text-teal">Previous Work</h2>
 <div class="collapsible-section">
-	<!-- Jamming -->
-	<button class="collapsible">Communication Jamming & Mapping</button>
+	<!-- Resource Uncertainty & Stochastic Tasking -->
+	<button class="collapsible">Resource Uncertainty &amp; Stochastic Tasking</button>
 	<div class="collapsible-content">
 		<p>
-			This work studied how to enable mobile agents to communicate effectively while avoiding malicious communication jamming. We explored various mapping techniques and looked at how to incorporate these maps in to the planning process for robot teams. 
+			This work addressed resource uncertainty commonly encountered when deploying real robots in the field. Some of the major challenges in task planning for multi-robot systems are properly managing robot resources (e.g., capabilities, energy, collaboration) while mitigating failures. I developed a decentralized task allocation architecture for UAVs that reasons over stochastic battery capacities to compute probabilistic guarantees of mission success, with particular interest in decentralized approaches that can adapt to lossy communication links between robots. This line of work culminated in an abstract, team-level planning framework that uses model uncertainty bounds to signal when to recompute team-level task plans online, enabling multi-robot tasking to remain flexible under changing model uncertainty.
 		</p>
-		<img src="images/comms-map.png" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p><strong>Relevant publications:</strong></p>
+		<ul>
+			<li>J. Diller, Y. S. Teoh, R. Byers, Q. Han, J. G. Rogers, and N. T. Dantam, &ldquo;Failure-aware tasking for teams of drones,&rdquo; in Proceedings of the International Conference on Distributed Computing Systems (ICDCS), 2025.</li>
+			<li>J. Diller, S. Homsi, and Q. Han, &ldquo;Semper Gumby: Making multi-robot tasking flexible under changing model uncertainty,&rdquo; submitted to the International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2027.</li>
+		</ul>
+		<img src="images/MonitoringSetupColorful.png" style="width:75%" onclick="onClick(this)" alt="Multi-robot task allocation under uncertainty" class="center-image">
 	</div>
 
-	<!-- MT-OTM -->
-	<button class="collapsible">Energy-Aware Drone Path Finding</button>
+	<!-- Communication-Aware Planning -->
+	<button class="collapsible">Communication-Aware Planning</button>
 	<div class="collapsible-content">
 		<p>
-			This work looked at how to incorporate speed-based drone energy models into path finding algorithms. We explored trade-offs in the speed-based energy model and evaluated how these tradeoffs could be leveraged to improve path finding. We also investigated the problem of launching drones from a ground vehicle that moves along a fixed trajectory. Applications for this work include maritime search and rescue, defense, security, and disaster response. 
+			This work focused on developing communication-aware planning methods that model wireless connectivity as a spatial resource, constructing communication maps to optimize robot placement and team sizes. Early work in this area studied how to enable mobile agents to communicate effectively while avoiding malicious communication jamming, exploring various mapping techniques and how to incorporate these maps into the planning process for robot teams. Connecting the energy and communication domains, I identified a fundamental energy tradeoff between waiting for data transmission and traveling to improve bandwidth, and incorporated this tradeoff into a framework that bridges the gap between optimistic offline planning and the stochastic nature of real-world deployments. This framework was applied to the problem of effectively deploying a team of drones to collect data from wireless sensors, combining offline multi-vehicle task planning with online adaptive behavior through a data-driven approach. A major aspect of this work was validating our solution through both simulations and field experiments on our physical testbed.
 		</p>
-		<img src="images/otm-golden.png" style="width:65%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p><strong>Relevant publications:</strong></p>
+		<ul>
+			<li>J. Diller, P. Hall, and Q. Han, &ldquo;Holistic path planning for multi-drone data collection,&rdquo; International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT), 2023.</li>
+			<li>J. Diller, N. T. Dantam, J. G. Rogers, and Q. Han, &ldquo;Communication jamming-aware robot path adaptation,&rdquo;International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT), 2023.</li>
+			<li>J. Diller, J. G. Rogers, N. T. Dantam, and Q. Han, &ldquo;Communication mapping for robot teams,&rdquo; IEEE Transactions on Field Robotics, 2025.</li>
+			<li>J. Diller, Q. Han, and M. Desaulniers, &ldquo;Holistic framework for multi-drone data collection in IoT systems,&rdquo; ACM Transactions on Internet Technology (TOIT), 2026.</li>
+		</ul>
+		<img src="images/comms-map.png" style="width:55%" onclick="onClick(this)" alt="Communication map for robot teams" class="center-image">
+	</div>
+
+	<!-- Energy-Aware Planning -->
+	<button class="collapsible">Energy-Aware Planning</button>
+	<div class="collapsible-content">
+		<p>
+			This line of work incorporated realistic UAV energy models into mission-aware speed scheduling, demonstrating improved performance and reduced energy failures over conventional methods. I explored trade-offs in the speed-based energy model and evaluated how these trade-offs could be leveraged to improve path finding, including the problem of launching drones from a ground vehicle that moves along a fixed trajectory. I then extended this framework to model UGV energy consumption and inter-robot energy transfer, enabling heterogeneous air-ground teams to operate more effectively under energy constraints. Drones are agile platforms that can be launched quickly and traverse rough terrain, but have limited onboard energy and cannot be deployed for extended periods. In contrast, UGVs are robust, high-endurance platforms that can carry a variety of sensors and operate for long periods of time, but lack the agility of drones. When combined, mixed drone-UGV teams benefit from the strengths of each platform, where drones quickly accomplish tasks with agility and UGVs act as mobile recharging stations. Applications for this work include maritime search and rescue, defense, security, and disaster response.
+		</p>
+		<p><strong>Relevant publications:</strong></p>
+		<ul>
+			<li>J. Diller and Q. Han, &ldquo;Energy-aware UAV path planning with adaptive speed,&rdquo; in Proceedings of the International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2023.</li>
+			<li>J. Diller and Q. Han, &ldquo;Energy-aware drone path finding with a fixed-trajectory ground vehicle,&rdquo; ACM Journal on Autonomous Transportation Systems, 2025.</li>
+			<li>J. Diller, Q. Han, R. Byers, J. Dotterweich, and J. Humann, &ldquo;Hitchhiker&rsquo;s guide to patrolling: Path-finding for energy-sharing drone-UGV teams,&rdquo; in Proceedings of the International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2025.</li>
+			<li>J. Diller, J. Sigler, and Q. Han, &ldquo;Collaborative path planning of energy-sharing drone-UGV teams for persistent patrolling,&rdquo; ACM Journal on Autonomous Transportation Systems, 2026.</li>
+		</ul>
+		<img src="images/Drone-UGV-Team.jpg" style="width:65%" onclick="onClick(this)" alt="Energy-aware drone-UGV teaming" class="center-image">
 	</div>
 
 	<!-- SmallSat -->
-	<button class="collapsible">SmallSat</button>
+	<button class="collapsible">Integrated Communication and Control for Robot Swarms</button>
 	<div class="collapsible-content">
 		<p>This project looked at how to integrate communication and control in swarms of UAVs. We used the <a href="https://solarsystem.nasa.gov/missions/near-shoemaker/in-depth/"  target="_blank">NEAR-Shoemaker</a> mission as a motivating case study and looked at how using a swarm of small satellites could be used to optimize the quantity and quality of data collected from the asteroid Eros.</p>
-		<img src="images/smallsat.png" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p><strong>Relevant publications:</strong></p>
+		<ul>
+			<li>J. Diller, Q. Han, C. Dreyer, F. Rossi, S. Bandopadhyay, J.P. de la Croix, A. Rahmani, P. Clark, &ldquo;Integrated Communication and Controls for Swarms of Small Satellites,&rdquo; Inter-Planetary Small Satellite Conference, 2021.</li>
+			<li>J. Diller, P. Hall, C. Schanker, K. Ung, P. Belous, P. Russell, and Q. Han, &ldquo;DroNS-3: Framework for Realistic Drone and Networking Simulators,&rdquo; Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet), 2023.</li>
+		</ul>
+		<img src="images/smallsat.png" style="width:55%" onclick="onClick(this)" alt="Small satellite swarm mission concept" class="center-image">
 	</div>
 
-	<!-- Load-Leveling Trainer -->
-	<button class="collapsible">Load-Scheduling for Microgrids</button>
+	<!-- SmallSat -->
+	<button class="collapsible">Intelligent Control of Microgrids</button>
 	<div class="collapsible-content">
-		<p>This work proposed a hardware implementation of demand side management (DSM) on an actual microgrid system to support grid needs. We proposed an algorithm for achieving DSM through load-leveling at the micro-level and implemented it on a physical microgrid. We conducted a simulated case study, based on the electrical load needs of small communities in Bangladesh, to demonstrate how our algorithm can be used to better balance electrical load demands.</p>
-		<img src="images/microgrid.png" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
-	</div>
-
-	<!-- Sinusoidal PWM -->
-	<button class="collapsible">Sinusoidal PWM for Three-Phase Converter</button>
-	<div class="collapsible-content">
-		<p>This work looked at how to implement Sinusoidal Pulse width modulation (sPWM) for single-phase and three-phase silicon carbide (SiC) converters using digital signal processing boards from Texas Instruments. We implemented our sPWM signal for SiC converters on a C2000 F28069M LaunchPad development kit and used it on a 3.5 kW three-phase SiC inverter experimental setup to validate the three-phase sPWM implementation.</p>
-		<img src="images/SPWM.png" style="width:55%" onclick="onClick(this)" alt="Windows for the atrium" class="center-image">
+		<p>
+			This work focused on the intelligent control of microgrids and renewable energy sources. We proposed a hardware implementation of demand side management (DSM) on an physical microgrid system through load-leveling. We conducted a simulated case study, based on the electrical load needs of small communities in Bangladesh, to demonstrate how our algorithm can be used to better balance electrical load demands. Another direction of this work developed Sinusoidal Pulse width modulation (sPWM) for single-phase and three-phase silicon carbide (SiC) converters using microcontrollers. We implemented our sPWM signal for SiC converters on a Texas Instruments' LaunchPad development kit and used it on a 3.5 kW three-phase SiC inverter experimental setup to validate the three-phase sPWM implementation.</p>
+		<p><strong>Relevant publications:</strong></p>
+		<ul>
+			<li>J. Diller, P. Idowu, J. Khazaei, &ldquo;“Load-Leveling Trainer for Demand Side Management on a 45kW Cyber-Physical Microgrid,&rdquo; Texas Power and Energy Conference, 2020.</li>
+			<li>J. Diller, B. Trussell, J. Khazaei, P. Idowu, &ldquo;“Hardware Development of a Three-Phase 3.5 kW SiC Converter with Sinusoidal PWM,&rdquo; Texas Power and Energy Conference, 2020.</li>
+		</ul>
+		<img src="images/microgrid.png" style="width:55%" onclick="onClick(this)" alt="Microgrid load scheduling" class="center-image">
 	</div>
 </div>
+
+
 </div>
 </div>
 
